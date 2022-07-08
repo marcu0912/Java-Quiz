@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <div class="header">
+            <div><a href="scores.html" style="color:black">View High Scores</a></div>
+            <div id="countdown"></div>
+        </div>
+
+        <div class="body1">
+            <div class="question"><h5>A very useful tool used during development and debugging for printing content to the debugger is:</h5></div>
+
+            <div class="options">
+                <a id="b1" onclick="alert('Wrong')">1. JavaScript</a>
+                <a id="b2" onclick="alert('Wrong')">2. terminal/bash</a>
+                <a id="b3" onclick="alert('Wrong')">3. for loops</a>
+                <a id="b4" onclick="alert('Correct')" href="results.html">4. console.log</a>
+            </div>
+
+
+
+        </div>
+
+
+
+    </body>
+
+    <script>
+var timeleft = 75;
+var downloadTimer = setInterval(function(){
+  if(timeleft <= 0){
+    clearInterval(downloadTimer);
+    window.alert("You have ran out of time!");
+    window.location.href = "index.html"
+  } else {
+    document.getElementById("countdown").innerHTML = "Time: " + timeleft;
+  }
+  timeleft -= 1;
+}, 1000);
+    </script>
+
+
+</html>
